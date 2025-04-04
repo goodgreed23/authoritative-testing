@@ -17,8 +17,11 @@ survey_items = ["I am very likely to tell someone what they should do; I sometim
                 ]
 
 csm_prompt_template = """
-Please revise the following ‘RESPONSE’ from a therapist to align better with the {communication_style} communication style. This style is characterized by the following definition: {definition} and measured by the survey items: {survey_item}. Ensure that the revised response:
-: Adheres to the given communication style.
+Please revise the following ‘RESPONSE’ from a therapist to align better with the {communication_style} communication style. 
+This style is characterized by the following definition: {definition} and measured by the survey items: {survey_item}. 
+Please apply the adaptation at an intensity level of {adaptation_intensity} (where 0 means no adaptation and 1 means full adaptation), ensuring that at least {preservation_percentage}% of the original therapeutic content is preserved.
+Ensure that the revised response:
+: Adheres to the given communication style as specified by the adaptation intensity.
 : Considers the ‘CONVERSATION HISTORY’ for context.
 : Asks only one question in the response.
 
